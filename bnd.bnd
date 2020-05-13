@@ -1,0 +1,3 @@
+Bundle-Name: password-protector-wrapper
+Bundle-SymbolicName: com.liferay.opsec.eliminatedefaultpasswordonceandforall
+Bundle-Version: 1.0.0
