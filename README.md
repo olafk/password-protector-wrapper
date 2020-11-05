@@ -11,9 +11,9 @@ But there are other situations, e.g. automatically imported Demo data (Looking a
 
 ## How to use this plugin?
 
-Just build the plugin (checkout in a Liferay Workspace, tested with Target Platform 7.2.10.1) and deploy it in your system. It will eliminate all new uses of "test" as a password and replace them with your configured `default.admin.password`. If you didn't configure this value different than "test", a hashed random value is being used. The random seed is different on each portal start, but will stay consistent for all uses during the same uptime. If you run a cluster, no cluster communication is implemented, every node has its own random seed.
+Just build the plugin (checkout in a Liferay Workspace, tested with `liferay.workspace.product=dxp-7.3-ga1` - earlier versions were built on Target Platform 7.2.10.1) and deploy it in your system. It will eliminate all new uses of "test" as a password and replace them with your configured `default.admin.password`. If you didn't configure this value different than "test", a hashed random value is being used. The random seed is different on each portal start, but will stay consistent for all uses during the same uptime. If you run a cluster, no cluster communication is implemented, every node has its own random seed.
 
-If you want to see the generated password: It's logged in `com.liferay.opsec.eliminatedefaultpasswordonceandforall.PasswordSanitizerImpl` on level `info`.
+If you *want* to *see* the generated password: It's logged in `com.liferay.opsec.eliminatedefaultpasswordonceandforall.PasswordSanitizerImpl` on level `info`.
 
 So: If you want to set the new default password yourself, configure it in your portal-ext.properties as `default.admin.password`. This means that it's on your disk, in clear text. Or just accept a random password - that's fine if you use impersonation in your demos instead of explicitly signing in.
 

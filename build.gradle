@@ -1,4 +1,8 @@
 dependencies {
-	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
 	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	
+	testImplementation group: "org.junit.jupiter", name: "junit-jupiter-api", version: "5.7.0"
+	testImplementation group: "com.liferay.portal", name: "release.dxp.api"
+	testRuntimeOnly group: "org.junit.jupiter", name: "junit-jupiter-engine", version: "5.7.0"
 }

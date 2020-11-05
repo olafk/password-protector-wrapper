@@ -29,7 +29,7 @@ public class PasswordProtectionUserLocalServiceWrapper extends UserLocalServiceW
 		super(wrappee);
 	}
 
-	@Override
+	@Override @Deprecated
 	public User addUser(long creatorUserId, long companyId, boolean autoPassword, String password1, String password2,
 			boolean autoScreenName, String screenName, String emailAddress, long facebookId, String openId,
 			Locale locale, String firstName, String middleName, String lastName, long prefixId, long suffixId,
@@ -53,7 +53,7 @@ public class PasswordProtectionUserLocalServiceWrapper extends UserLocalServiceW
 		return super.addUser(user);
 	}
 
-	@Override
+	@Override @Deprecated
 	public User addUserWithWorkflow(long creatorUserId, long companyId, boolean autoPassword, String password1,
 			String password2, boolean autoScreenName, String screenName, String emailAddress, long facebookId,
 			String openId, Locale locale, String firstName, String middleName, String lastName, long prefixId,
@@ -69,7 +69,7 @@ public class PasswordProtectionUserLocalServiceWrapper extends UserLocalServiceW
 				serviceContext);
 	}
 
-	@Override
+	@Override @Deprecated
 	public User updateUser(long userId, java.lang.String oldPassword, java.lang.String newPassword1,
 			java.lang.String newPassword2, boolean passwordReset, java.lang.String reminderQueryQuestion,
 			java.lang.String reminderQueryAnswer, java.lang.String screenName, java.lang.String emailAddress,
